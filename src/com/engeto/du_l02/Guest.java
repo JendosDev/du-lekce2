@@ -1,3 +1,5 @@
+package com.engeto.du_l02;
+
 import java.time.LocalDate;
 
 public class Guest {
