@@ -1,59 +1,75 @@
 package com.engeto.du_l02;
 
 import java.time.LocalDate;
+import java.util.List;
 
 public class Booking {
-    private int room;
-    private String guest;
-    private String otherGuests;
-    private LocalDate arrival;
-    private LocalDate departure;
+    private Room room;
+    private Guest guest;
+    private Guest otherGuests;
+    private LocalDate arrivalDate;
+    private LocalDate departureDate;
+    private boolean isCompanyStay;
 
-    public Booking(int room, String guest, String otherGuests, LocalDate arrival, LocalDate departure) {
+    public Booking(Room room, Guest guest, Guest otherGuests, LocalDate arrivalDate, LocalDate departureDate, boolean isCompanyStay) {
         this.room = room;
         this.guest = guest;
         this.otherGuests = otherGuests;
-        this.arrival = arrival;
-        this.departure = departure;
+        this.arrivalDate = arrivalDate;
+        this.departureDate = departureDate;
+        this.isCompanyStay = isCompanyStay;
     }
 
-    public int getRoom() {
+    public Room getRoom() {
         return room;
     }
 
-    public void setRoom(int room) {
+    public void setRoom(Room room) {
         this.room = room;
     }
 
-    public String getGuest() {
+    public Guest getGuest() {
         return guest;
     }
 
-    public void setGuest(String guest) {
+    public void setGuest(Guest guest) {
         this.guest = guest;
     }
 
-    public String getOtherGuests() {
+    public Guest getOtherGuests() {
         return otherGuests;
     }
 
-    public void setOtherGuests(String otherGuests) {
+    public void setOtherGuests(Guest otherGuests) {
         this.otherGuests = otherGuests;
     }
 
-    public LocalDate getArrival() {
-        return arrival;
+    public LocalDate getArrivalDate() {
+        return arrivalDate;
     }
 
-    public void setArrival(LocalDate arrival) {
-        this.arrival = arrival;
+    public void setArrivalDate(LocalDate arrivalDate) {
+        this.arrivalDate = arrivalDate;
     }
 
-    public LocalDate getDeparture() {
-        return departure;
+    public LocalDate getDepartureDate() {
+        return departureDate;
     }
 
-    public void setDeparture(LocalDate departure) {
-        this.departure = departure;
+    public void setDepartureDate(LocalDate departureDate) {
+        this.departureDate = departureDate;
+    }
+
+    public boolean isCompanyStay() {
+        return isCompanyStay;
+    }
+
+    public void setCompanyStay(boolean companyStay) {
+        isCompanyStay = companyStay;
+    }
+
+    @Override
+    public String toString() {
+        return room + " " + guest + " " + arrivalDate + " " + departureDate + " " + isCompanyStay;
     }
 }
